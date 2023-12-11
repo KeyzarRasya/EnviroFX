@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #47754B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="164.0" layoutY="323.0" prefHeight="191.0" prefWidth="373.0" text="Rent" textFill="#e1b57e">
+         <font>
+            <Font name="System Bold" size="130.0" />
+         </font>
+      </Label>
+      <Button layoutX="350.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Charity" textFill="#e1b57e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="61.0" layoutY="21.0" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <Button layoutX="938.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Rent" textFill="#e1b57e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="729.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Wheater" textFill="#e1b57e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="529.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="EduQuiz" textFill="#e1b57e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Pane layoutX="674.0" layoutY="157.0" prefHeight="595.0" prefWidth="495.0" style="-fx-background-color: #EFE0CD; -fx-background-radius: 30;">
+         <children>
+            <ChoiceBox layoutX="55.0" layoutY="152.0" prefHeight="56.0" prefWidth="385.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
+            <TextField layoutX="55.0" layoutY="255.0" prefHeight="56.0" prefWidth="385.0" promptText="Code" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="55.0" layoutY="351.0" prefHeight="56.0" prefWidth="385.0" promptText="Price" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button layoutX="196.0" layoutY="478.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="107.0" style="-fx-background-color: #47754B; -fx-background-radius: 50;" text="Rent" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <FontAwesomeIconView glyphName="USER" layoutX="1223.0" layoutY="64.0" size="60" />
+   </children>
+</Pane>

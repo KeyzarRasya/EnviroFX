@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #EFE0CD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="745.0" layoutY="180.0" prefHeight="88.0" prefWidth="391.0" text="Judul Charity" textFill="#47754b">
+         <font>
+            <Font name="System Bold" size="60.0" />
+         </font>
+      </Label>
+      <Pane layoutX="40.0" layoutY="124.0" prefHeight="636.0" prefWidth="538.0" style="-fx-background-color: #E1B57E; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="31.0" layoutY="16.0" text="ID : 001" textFill="#47754b">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6fbff" height="261.0" layoutX="24.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="476.0" />
+            <Label layoutX="28.0" layoutY="322.0" text="Date : 11/12/23" textFill="#47754b">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button layoutX="180.0" layoutY="556.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="172.0" style="-fx-background-color: #5C5A5A; -fx-background-radius: 50;" text="Donate Now!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Text layoutX="632.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxk" wrappingWidth="597.7091674804688">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <Label layoutX="823.0" layoutY="282.0" text="Hosted by : Human" textFill="#47754b">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="91.0" prefWidth="1283.0" style="-fx-background-color: #47754B;">
+         <children>
+            <Button layoutX="340.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Charity" textFill="#e1b57e">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="51.0" layoutY="11.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Button layoutX="928.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Rent" textFill="#e1b57e">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="719.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="Wheater" textFill="#e1b57e">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="519.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #47754B;" text="EduQuiz" textFill="#e1b57e">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <FontAwesomeIconView glyphName="USER" layoutX="1224.0" layoutY="65.0" size="60" />
+   </children>
+</Pane>
