@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
@@ -29,6 +30,8 @@ public class TopUpController {
     private Button topup;
     @FXML
     private TextField amount;
+    @FXML
+    private Label status;
 
     private User user;
 
@@ -42,6 +45,7 @@ public class TopUpController {
 
     public void initialize(){
         setUser(LoginController.user);
+        status.setText("");
     }
 
     public void onTopUp() throws IOException {
@@ -84,6 +88,9 @@ public class TopUpController {
             // Membaca response dari server
             int responseCode = con.getResponseCode();
             System.out.println("Response Code : " + responseCode);
+            if(responseCode == 200){
+                status.setText("Top Up Berhasil");
+            }
 
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;

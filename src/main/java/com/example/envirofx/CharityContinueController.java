@@ -32,6 +32,8 @@ public class CharityContinueController {
     private Pane root;
     @FXML
     private Label home;
+    @FXML
+    private Label lokasi;
 
     private Charity selectedCharity;
 
@@ -43,6 +45,7 @@ public class CharityContinueController {
         host.setText(selectedCharity.getHost());
         amount.setText("Rp. "+selectedCharity.getCharityAmount());
         funded.setText("Rp. "+selectedCharity.getFundedMoney());
+        lokasi.setText(selectedCharity.getKota()+", "+selectedCharity.getProvinsi());
         home.setOnMouseClicked(this::onHome);
     }
 

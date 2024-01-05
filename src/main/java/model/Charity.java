@@ -14,6 +14,9 @@ public class Charity {
     private boolean isVerified;
     private boolean isComplete;
 
+    private String kota;
+    private String provinsi;
+
     public Long getId() {
         return id;
     }
@@ -88,5 +91,21 @@ public class Charity {
 
     public void setHost(String host) {
         this.host = host;
+    }
+
+    public String getKota() {
+        return kota;
+    }
+
+    public void setKota(String kota) {
+        this.kota = kota;
+    }
+
+    public String getProvinsi() {
+        return provinsi;
+    }
+
+    public void setProvinsi(String provinsi) {
+        this.provinsi = provinsi;
     }
 }

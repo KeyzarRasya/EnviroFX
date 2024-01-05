@@ -47,6 +47,16 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
+            <Label layoutX="33.0" layoutY="447.0" text="Lokasi : " textFill="#47754b">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lokasi" layoutX="112.0" layoutY="447.0" text="Kota, Provinsi" textFill="#47754b">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
          </children></Pane>
       <Text fx:id="description" layoutX="632.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxkisxkisjxkasjxkajscxkiajsckiajscksckasjskjcasxfcgvhbjnkjihxugyqwdvhscjbkedhsjbcvbkjnlkml;,;.’uyyjk;ojihugyfcgvhbjnkmhuygftdrdxfcgvhbjbhgkznkixkisaixsixisxk" wrappingWidth="597.7091674804688">
          <font>

@@ -54,6 +54,11 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Button>
+            <Label fx:id="status" layoutX="115.0" layoutY="386.0" text="Donasi Berhasil" textFill="#e1b57e">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Circle fill="#efe0cd" layoutX="1233.0" layoutY="51.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />

@@ -12,8 +12,8 @@
    <children>
       <Pane layoutX="365.0" layoutY="73.0" prefHeight="649.0" prefWidth="489.0" style="-fx-background-color: #668769; -fx-background-radius: 20;">
          <children>
-            <PasswordField fx:id="passwordField" layoutX="61.0" layoutY="424.0" prefHeight="60.0" prefWidth="367.0" promptText="Password" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
-            <Button layoutX="153.0" layoutY="539.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="68.0" prefWidth="192.0" style="-fx-background-color: #304F33; -fx-background-radius: 50;" text="Create!" textFill="WHITE">
+            <PasswordField fx:id="passwordField" layoutX="53.0" layoutY="384.0" prefHeight="60.0" prefWidth="367.0" promptText="Password" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
+            <Button layoutX="168.0" layoutY="474.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="52.0" prefWidth="153.0" style="-fx-background-color: #304F33; -fx-background-radius: 50;" text="Create!" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -23,8 +23,18 @@
                   <Font name="System Bold" size="41.0" />
                </font>
             </Label>
-            <TextField fx:id="email" layoutX="53.0" layoutY="184.0" prefHeight="60.0" prefWidth="367.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
-            <TextField fx:id="username" layoutX="61.0" layoutY="303.0" prefHeight="60.0" prefWidth="367.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
+            <TextField fx:id="email" layoutX="53.0" layoutY="184.0" prefHeight="60.0" prefWidth="367.0" promptText="Email" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
+            <TextField fx:id="username" layoutX="53.0" layoutY="278.0" prefHeight="60.0" prefWidth="367.0" promptText="Username" style="-fx-background-color: #D9D9D9; -fx-background-radius: 50;" />
+            <Button fx:id="login" layoutX="168.0" layoutY="552.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="52.0" prefWidth="153.0" style="-fx-background-color: #304F33; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Button>
+            <Label fx:id="status" layoutX="128.0" layoutY="124.0" text="account created" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

@@ -45,7 +45,7 @@
       </Label>
       <Pane layoutX="34.0" layoutY="219.0" prefHeight="543.0" prefWidth="1237.0" style="-fx-background-color: #E1B57E; -fx-background-radius: 15;">
          <children>
-            <TextArea fx:id="description" layoutX="10.0" layoutY="87.0" prefHeight="443.0" prefWidth="1212.0" promptText="Write The Description" style="-fx-background-color: #E1B57E;">
+            <TextArea fx:id="description" layoutX="13.0" layoutY="100.0" prefHeight="274.0" prefWidth="1212.0" promptText="Write The Description" style="-fx-background-color: #E1B57E;">
                <font>
                   <Font size="24.0" />
                </font>
@@ -65,6 +65,16 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
+            <TextField fx:id="kokab" alignment="CENTER" layoutX="116.0" layoutY="415.0" prefHeight="44.0" prefWidth="350.0" promptText="Kota/Kabupaten">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="provinsi" alignment="CENTER" layoutX="798.0" layoutY="411.0" prefHeight="44.0" prefWidth="350.0" promptText="Provinsi">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
          </children>
       </Pane>
       <Button fx:id="upload" layoutX="1146.0" layoutY="157.0" mnemonicParsing="false" onAction="#onUpload" prefHeight="50.0" prefWidth="125.0" style="-fx-background-radius: 50; -fx-background-color: #5C5A5A;" text="Upload" textFill="WHITE">

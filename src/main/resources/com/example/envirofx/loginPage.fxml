@@ -12,7 +12,7 @@
    <children>
       <Pane layoutX="365.0" layoutY="73.0" prefHeight="649.0" prefWidth="489.0" style="-fx-background-color: #668769; -fx-background-radius: 20;">
          <children>
-            <Button layoutX="152.0" layoutY="537.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="68.0" prefWidth="192.0" style="-fx-background-color: #304F33; -fx-background-radius: 50;" text="Sign up" textFill="WHITE">
+            <Button fx:id="signup" layoutX="152.0" layoutY="537.0" mnemonicParsing="false" onAction="#onSignUp" prefHeight="68.0" prefWidth="192.0" style="-fx-background-color: #304F33; -fx-background-radius: 50;" text="Sign up" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>

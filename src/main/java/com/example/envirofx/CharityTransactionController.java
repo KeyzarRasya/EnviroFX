@@ -36,6 +36,8 @@ public class CharityTransactionController {
     private Button donate;
     @FXML
     private Button back;
+    @FXML
+    private Label status;
     private Charity selectedCharity;
 
     public void initialize(){
@@ -43,6 +45,7 @@ public class CharityTransactionController {
         id.setText("ID :"+selectedCharity.getId());
         judul.setText(selectedCharity.getTitle());
         host.setText(selectedCharity.getHost());
+        status.setText((""));
     }
 
     public void onBack(){
@@ -76,6 +79,9 @@ public class CharityTransactionController {
             // Get the response code
             int responseCode = conn.getResponseCode();
             System.out.println("Response Code : " + responseCode);
+            if(responseCode == 200){
+                status.setText("Donasi Berhasil");
+            }
 
             // Read the response
             try (BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {

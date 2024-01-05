@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import model.User;
 import org.json.JSONObject;
@@ -30,6 +31,8 @@ public class LoginController {
     private TextField passwordField;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button signup;
 
     public static String userData;
 
@@ -82,7 +85,7 @@ public class LoginController {
             if(response.statusCode() == 200 && isFirst){
                 user = new User();
                 setUser();
-                openHomePage();
+                openHomePage(loginButton, "homePage.fxml");
             }else if(response.statusCode() == 200 && !isFirst){
                 user = new User();
                 setUser();
@@ -92,15 +95,15 @@ public class LoginController {
         }
     }
 
-    private void openHomePage() {
+    private void openHomePage(Region region, String fxml) {
         try {
             // Load the new scene
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource("homePage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource(fxml));
             Parent root = fxmlLoader.load();
             Scene newScene = new Scene(root);
 
             // Get the current stage
-            Stage currentStage = (Stage) loginButton.getScene().getWindow();
+            Stage currentStage = (Stage) region.getScene().getWindow();
             currentStage.setFullScreen(true);
             currentStage.setScene(newScene);
             currentStage.show();
@@ -145,6 +148,10 @@ public class LoginController {
         user.setUsername(principalObject.getString("username"));
         user.setPoint(principalObject.getInt("point"));
         user.setPassword(principalObject.getString("password"));
+    }
+
+    public void onSignUp(){
+        openHomePage(this.signup, "createAccount.fxml");
     }
 
 

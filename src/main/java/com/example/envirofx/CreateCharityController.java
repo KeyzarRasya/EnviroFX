@@ -57,6 +57,10 @@ public class CreateCharityController {
     private Button rent;
     @FXML
     private Label home;
+    @FXML
+    private TextField kokab;
+    @FXML
+    private TextField provinsi;
 
     public void onCharity(){
         openNewPage(this.charity, "charityPage.fxml");
@@ -109,7 +113,14 @@ public class CreateCharityController {
             conn.setRequestProperty("Authorization", "Basic " + encodeCredentials(user.getUsername(), user.getPassword()));
 
             // Buat body request
-            String requestBody = String.format("{\"title\":\"%s\",\"description\":\"%s\",\"charityAmount\":\"%s\"}", title.getText(), description.getText(), new BigDecimal(amount.getText()));
+            String requestBody = String.format(
+                    "{\"title\":\"%s\",\"description\":\"%s\",\"charityAmount\":%s,\"address\":{\"kota\":\"%s\",\"provinsi\":\"%s\"}}",
+                    title.getText(),
+                    description.getText(),
+                    new BigDecimal(amount.getText()),
+                    kokab.getText(),
+                    provinsi.getText()
+            );
 
             // Aktifkan output untuk mengirimkan body request
             conn.setDoOutput(true);

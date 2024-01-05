@@ -37,7 +37,14 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <Pane layoutX="39.0" layoutY="455.0" prefHeight="312.0" prefWidth="569.0" style="-fx-background-color: #EFE0CD; -fx-background-radius: 30;" />
+      <Pane layoutX="39.0" layoutY="455.0" prefHeight="312.0" prefWidth="569.0" style="-fx-background-color: #EFE0CD; -fx-background-radius: 30;">
+         <children>
+            <Label fx:id="kokab" layoutX="61.0" layoutY="88.0" text="Nama Kota" textFill="#47754b">
+               <font>
+                  <Font name="System Bold" size="80.0" />
+               </font>
+            </Label>
+         </children></Pane>
       <Pane layoutX="738.0" layoutY="320.0" prefHeight="430.0" prefWidth="495.0" style="-fx-background-color: #EFE0CD; -fx-background-radius: 30;">
          <children>
             <Pane layoutY="-166.0" prefHeight="284.0" prefWidth="495.0" style="-fx-background-color: #FFF3EA; -fx-background-radius: 30;">

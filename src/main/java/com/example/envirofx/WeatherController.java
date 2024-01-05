@@ -39,6 +39,8 @@ public class WeatherController {
     private Button rent;
     @FXML
     private Label home;
+    @FXML
+    private Label kokab;
 
 
     public void onCharity(){
@@ -97,6 +99,8 @@ public class WeatherController {
         String kabkota = "Purwakarta";
         String prov = "Jawa-Barat";
         String urlString = String.format("%s/%s/%s", endpoint, prov, kabkota);
+
+        kokab.setText(kabkota);
 
         // Buat objek URL dari string URL
         URL url = new URL(urlString);

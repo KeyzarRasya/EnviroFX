@@ -191,6 +191,9 @@ public class HomeController {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Charity charity1 = new Charity();
                 JSONObject host = jsonObject.getJSONObject("host");
+                JSONObject address = jsonObject.getJSONObject("address");
+                charity1.setKota(address.getString("kota"));
+                charity1.setProvinsi(address.getString("provinsi"));
                 charity1.setId(jsonObject.getLong("id"));
                 charity1.setTitle(jsonObject.getString("title"));
                 charity1.setCharityAmount(jsonObject.getBigDecimal("charityAmount"));
