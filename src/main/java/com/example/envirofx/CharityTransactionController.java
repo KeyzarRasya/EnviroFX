@@ -56,27 +56,21 @@ public class CharityTransactionController {
         System.out.println(donation.getText());
         User user = LoginController.user;
         try {
-            // Create URL object
             URL url = new URL("http://localhost:8080/user/donate/"+ selectedCharity.getId() +"/"+donation.getText()); // Replace with actual charityId and amount
 
-            // Create connection object
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
-            // Set the request method
             conn.setRequestMethod("POST");
 
-            // Set request headers
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestProperty("Authorization", "Basic " + encodeCredentials(user.getUsername(), user.getPassword()));
 
-            // Enable output and write the request body
             conn.setDoOutput(true);
             try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
                 String requestBody = "{}"; // Empty JSON since no request body is expected in the endpoint
                 wr.write(requestBody.getBytes(StandardCharsets.UTF_8));
             }
 
-            // Get the response code
             int responseCode = conn.getResponseCode();
             System.out.println("Response Code : " + responseCode);
             if(responseCode == 200){

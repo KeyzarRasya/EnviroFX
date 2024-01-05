@@ -65,7 +65,6 @@ public class LoginController {
         String username = usernames;
         String password = passwords;
 
-        // Panggil metode untuk mengirim permintaan login ke Spring Boot
         sendLoginRequest(username, password, isFirst);
     }
 
@@ -79,7 +78,6 @@ public class LoginController {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             setUserData(response.body());
-            // Handle response, misalnya, tampilkan pesan ke pengguna
             System.out.println("Response Code: " + response.statusCode());
             System.out.println("Response Body: " + response.body());
             if(response.statusCode() == 200 && isFirst){
@@ -97,19 +95,16 @@ public class LoginController {
 
     private void openHomePage(Region region, String fxml) {
         try {
-            // Load the new scene
             FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource(fxml));
             Parent root = fxmlLoader.load();
             Scene newScene = new Scene(root);
 
-            // Get the current stage
             Stage currentStage = (Stage) region.getScene().getWindow();
             currentStage.setFullScreen(true);
             currentStage.setScene(newScene);
             currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            // Handle the exception appropriately, e.g., show an error message to the user
         }
     }
 
@@ -123,7 +118,6 @@ public class LoginController {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             setUserData(response.body());
-            // Handle response, misalnya, tampilkan pesan ke pengguna
             System.out.println("Response Code: " + response.statusCode());
             System.out.println("Response Body: " + response.body());
             if(response.statusCode() == 200 && !isFirst){

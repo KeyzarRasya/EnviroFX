@@ -94,26 +94,15 @@ public class WeatherController {
     }
 
     public void fetchCuaca() throws IOException {
-        // Buat URL dengan parameter query
         String endpoint = "https://cuaca-gempa-rest-api.vercel.app/weather";
         String kabkota = "Purwakarta";
         String prov = "Jawa-Barat";
         String urlString = String.format("%s/%s/%s", endpoint, prov, kabkota);
 
         kokab.setText(kabkota);
-
-        // Buat objek URL dari string URL
         URL url = new URL(urlString);
-
-        // Buka koneksi HTTP
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-        // Setel metode permintaan ke GET
         connection.setRequestMethod("GET");
-
-        // Setel header Apikey
-
-        // Baca respons dari server
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         StringBuilder response = new StringBuilder();
         String line;
@@ -121,22 +110,13 @@ public class WeatherController {
             response.append(line);
         }
         reader.close();
-
-        // Tampilkan respons
-
         getTemp(response.toString());
-
-        // Tutup koneksi
         connection.disconnect();
     }
 
     public void getTemp(String response) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-
-        // Parse the JSON response
         JsonNode jsonNode = objectMapper.readTree(response);
-
-        // Navigate to the "Temperature" parameter
         JsonNode temperatureParameter = null;
         for (JsonNode param : jsonNode.path("data").path("params")) {
             if (param.path("id").asText().equals("t")) {
@@ -146,15 +126,10 @@ public class WeatherController {
         }
 
         if (temperatureParameter != null) {
-            // Get the "times" array under the "Temperature" parameter
             JsonNode temperatureTimes = temperatureParameter.path("times");
-
-            // Get the temperature in Celsius from the first entry
             String temperatureCelsius = temperatureTimes.get(0).path("celcius").asText();
             setResponseTemp(temperatureCelsius);
             System.out.println(getResponseTemp());
-            // Print the temperature in Celsius
-
         } else {
             System.out.println("Temperature parameter not found");
         }

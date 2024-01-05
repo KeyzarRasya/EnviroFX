@@ -47,19 +47,16 @@ public class CreateAccController {
 
     private void openHomePage(Region region, String fxml) {
         try {
-            // Load the new scene
             FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource(fxml));
             Parent root = fxmlLoader.load();
             Scene newScene = new Scene(root);
 
-            // Get the current stage
             Stage currentStage = (Stage) region.getScene().getWindow();
             currentStage.setFullScreen(true);
             currentStage.setScene(newScene);
             currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            // Handle the exception appropriately, e.g., show an error message to the user
         }
     }
 

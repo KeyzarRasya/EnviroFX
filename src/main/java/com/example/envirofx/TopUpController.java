@@ -50,42 +50,24 @@ public class TopUpController {
 
     public void onTopUp() throws IOException {
             String url = "http://localhost:8080/user/topup/{amount}"; // Ganti dengan URL sesuai kebutuhan
-            String username = "username"; // Ganti dengan username yang sesuai
-            String password = "password"; // Ganti dengan password yang sesuai
 
-            // Menggabungkan URL dengan nilai path variable
             String fullUrl = url.replace("{amount}", amount.getText());
 
-            // Membuat objek URL
             URL obj = new URL(fullUrl);
-
-            // Membuat koneksi HttpURLConnection
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-            // Mengatur metode request sebagai POST
             con.setRequestMethod("POST");
-
-            // Mengatur header
             con.setRequestProperty("Content-Type", "application/json");
-
-            // Menyiapkan credential untuk Basic Authentication
             String credentials = user.getUsername() + ":" + user.getPassword();
             String encodedCredentials = Base64.getEncoder().encodeToString(credentials.getBytes());
-
-            // Menambahkan header Authorization untuk Basic Authentication
             con.setRequestProperty("Authorization", "Basic " + encodedCredentials);
-
-            // Membuat payload request body
             String payload = "{ \"username\": \"" + user.getUsername() + "\", \"amount\": " + amount + " }";
 
-            // Mengaktifkan output dari koneksi untuk mengirimkan payload
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(payload);
             wr.flush();
             wr.close();
 
-            // Membaca response dari server
             int responseCode = con.getResponseCode();
             System.out.println("Response Code : " + responseCode);
             if(responseCode == 200){
@@ -100,8 +82,6 @@ public class TopUpController {
                 response.append(inputLine);
             }
             in.close();
-
-            // Menampilkan response
             System.out.println("Response : " + response.toString());
     }
 

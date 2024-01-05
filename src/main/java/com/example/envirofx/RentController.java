@@ -52,15 +52,11 @@ public class RentController {
         choiceBox.setPrefHeight(56.0);
         choiceBox.setPrefWidth(385.0);
         choiceBox.setStyle("-fx-background-color: #D9D9D9; -fx-background-radius: 50;");
-
-        // Create a map to associate each item with its corresponding Vehicle
         Map<String, Vehicle> vehicleMap = new HashMap<>();
         for (Vehicle vehicle : HomeController.allVehicle) {
             choiceBox.getItems().add(vehicle.getType());
             vehicleMap.put(vehicle.getType(), vehicle);
         }
-
-        // Add a listener to the choiceBox
         choiceBox.valueProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 Vehicle selectedVehicle = vehicleMap.get(newValue);
@@ -68,7 +64,6 @@ public class RentController {
                     System.out.println("Selected Vehicle: " + selectedVehicle.getType());
                     price.setText(String.valueOf(selectedVehicle.getCost()));
                     setVehicle(selectedVehicle);
-                    // You can use the selected vehicle (selectedVehicle) here as needed
                 }
             }
         });
@@ -84,11 +79,7 @@ public class RentController {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
 
-            // Set any request headers if needed
             conn.setRequestProperty("Content-Type", "application/json");
-
-            // If you need to send any request body data, you can do so here
-            // For example, if you need to send JSON data
             String requestBody = "{\"key1\": \"value1\", \"key2\": \"value2\"}";
             conn.setDoOutput(true);
             try (OutputStream os = conn.getOutputStream()) {

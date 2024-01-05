@@ -112,7 +112,6 @@ public class CreateCharityController {
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestProperty("Authorization", "Basic " + encodeCredentials(user.getUsername(), user.getPassword()));
 
-            // Buat body request
             String requestBody = String.format(
                     "{\"title\":\"%s\",\"description\":\"%s\",\"charityAmount\":%s,\"address\":{\"kota\":\"%s\",\"provinsi\":\"%s\"}}",
                     title.getText(),
@@ -122,14 +121,13 @@ public class CreateCharityController {
                     provinsi.getText()
             );
 
-            // Aktifkan output untuk mengirimkan body request
             conn.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
             wr.writeBytes(requestBody);
             wr.flush();
             wr.close();
 
-            // Baca response
+
             int responseCode = conn.getResponseCode();
             System.out.println("Response Code : " + responseCode);
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -140,7 +138,7 @@ public class CreateCharityController {
             }
             in.close();
 
-            // Print response
+
             System.out.println("Response : " + response.toString());
             if(responseCode == 200){
                 status.setText("Create Successfully");
@@ -150,8 +148,6 @@ public class CreateCharityController {
             e.printStackTrace();
         }
     }
-
-    // Fungsi untuk encode username dan password menjadi Basic Auth
     private static String encodeCredentials(String username, String password) {
         String credentials = username + ":" + password;
         return Base64.getEncoder().encodeToString(credentials.getBytes());
